@@ -1,0 +1,57 @@
+/* =Main
+-----------------------------------------------------------------------------*/
+main
+{
+	article
+	{
+		row
+		{
+			column
+			{
+				&:nth-of-type(1)
+				{
+					p:not(.lead)
+					{
+						font-weight: 300;
+						font-size: @font-size-medium;
+						line-height: @base-line-big;
+					}
+				}
+				&:nth-of-type(2)
+				{
+					border: 6px solid @color-headings;
+					.vertical-align();
+					h2
+					{
+						font-size: @font-size-big;
+						font-weight: bold;
+						text-transform: uppercase;
+						line-height: @base-line-big;
+						span
+						{
+							display: block;
+							font-size: @font-size-small;
+							font-weight: 400;
+							text-transform: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	section
+	{
+		&.portfolio
+		{
+			a
+			{
+				.transition(all ease .5s);
+				&:hover
+				{
+					-webkit-filter: brightness(1.5);
+					filter: brightness(1.5);
+				}
+			}
+		}
+	}
+}

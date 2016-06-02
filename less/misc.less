@@ -1,0 +1,28 @@
+/* =Misc
+-----------------------------------------------------------------------------*/
+@from : 0;
+@to : 100;
+
+.loop(@index) when(@index =< @to) {
+  .margin-top-@{index} {
+    margin-top: unit(@index, px);
+  }
+  .margin-bottom-@{index} {
+    margin-bottom: unit(@index, px);
+  }
+  .margin-right-@{index} {
+    margin-right: unit(@index, px);
+  }
+  .margin-left-@{index} {
+    margin-left: unit(@index, px);
+  }
+  .loop(@index + 10);
+}
+.loop(@from);
+
+.outline
+{
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6 & 7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
